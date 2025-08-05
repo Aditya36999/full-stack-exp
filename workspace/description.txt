@@ -1,0 +1,15 @@
+Admin Dashboard - Description
+This is a responsive Admin Dashboard interface designed using HTML, CSS, and JavaScript. It provides a clean, minimal layout suitable for managing users, settings, and viewing reports. The design includes:
+
+Header: A green top bar featuring the dashboard title and a toggle switch for dark mode.
+
+Sidebar Navigation: A vertical menu on the left with navigation links to Home, Users, and Settings.
+
+Main Content Area: Displays a welcome message and placeholder text where charts, tables, or reports can be inserted.
+
+Footer: A fixed bottom section with copyright.
+
+Dark Mode: A toggle that switches the theme to a darker color scheme for better accessibility and user preference.
+
+This template is a great starting point for admin panels, content management systems (CMS), or any backend interface requiring user management and analytics features.
+
