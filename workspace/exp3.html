@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <input type="checkbox" id="darkModeToggle" hidden />
   <div class="dashboard">
     <header class="header">
       <h1>Admin Dashboard</h1>
-      <label class="dark-mode-toggle">
-        <input type="checkbox" id="darkModeToggle" />
+      <label class="dark-mode-toggle" for="darkModeToggle">
         Dark Mode
       </label>
     </header>
@@ -35,7 +33,5 @@
       &copy; 2025 Admin Panel
     </footer>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

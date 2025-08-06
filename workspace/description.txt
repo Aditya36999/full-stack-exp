@@ -1,15 +1,176 @@
-Admin Dashboard - Description
-This is a responsive Admin Dashboard interface designed using HTML, CSS, and JavaScript. It provides a clean, minimal layout suitable for managing users, settings, and viewing reports. The design includes:
+ADMIN DASHBOARD WITH CSS GRID LAYOUT AND THEME SWITCHING  
+FEATURES TEST CASES & VALIDATIONS  
+1. FIELD: Sidebar Navigation  
+Requirement: Clickable links to various dashboard sections, such as Home, Users, and Settings.  
 
-Header: A green top bar featuring the dashboard title and a toggle switch for dark mode.
+The current active section should be highlighted.  
 
-Sidebar Navigation: A vertical menu on the left with navigation links to Home, Users, and Settings.
+It must remain fixed during scrolling, with its position set to fixed.  
 
-Main Content Area: Displays a welcome message and placeholder text where charts, tables, or reports can be inserted.
+It must be accessible via keyboard using the Tab and Enter keys.  
 
-Footer: A fixed bottom section with copyright.
+VALID BEHAVIOR:  
 
-Dark Mode: A toggle that switches the theme to a darker color scheme for better accessibility and user preference.
+Clicking on "Users" directs you to the Users section.  
 
-This template is a great starting point for admin panels, content management systems (CMS), or any backend interface requiring user management and analytics features.
+The active tab changes its background color with the active CSS class applied.  
 
+INVALID BEHAVIOR:  
+
+There is no visual feedback upon clicking.  
+
+Navigation buttons are not accessible by keyboard.  
+
+Clicking links does not perform any action; there is no scroll or section activation.  
+
+2. FIELD: Theme Switcher (Light / Dark Mode Toggle)  
+Requirement: Switch between light and dark themes using a button or switch.  
+
+The theme choice must persist, either in localStorage or session memory.  
+
+It must dynamically update CSS variables or classes.  
+
+VALID INPUTS:  
+
+Clicking “Switch to Dark Mode” activates the dark theme, which has a dark background and light text.  
+
+The theme remains after a page reload.  
+
+INVALID INPUTS:  
+
+The theme switch resets upon reloading.  
+
+The switch button doesn’t change the theme.  
+
+3. FIELD: Dashboard Grid Layout  
+Requirement: The layout must use CSS Grid to arrange panels, such as analytics, charts, and recent activity.  
+
+It must be responsive and adjust to different screen sizes.  
+
+There should be at least a 2-column layout on desktops and a 1-column layout on mobile devices.  
+
+VALID BEHAVIOR:  
+
+On desktops, a 2 or 3-column layout is displayed.  
+
+On mobile, cards stack vertically.  
+
+INVALID BEHAVIOR:  
+
+The layout fails to adjust when resizing.  
+
+It uses Flexbox instead of CSS Grid, which does not meet the experiment objective.  
+
+4. FIELD: Widget Panels (Analytics, User Info, etc.)  
+Requirement: Each panel must be visually different, with padding, shadow, and border-radius.  
+
+Content within panels should not overflow.  
+
+Icons or indicators must align correctly.  
+
+VALID EXAMPLES:  
+
+A widget showing the total user count with a rounded card and shadow.  
+
+The activity feed displays the latest updates without overflowing.  
+
+INVALID EXAMPLES:  
+
+There is no spacing inside the panels.  
+
+Text overlaps or spills out.  
+
+5. FORM SUBMISSION (If Any Forms Exist)  
+Optional forms like “Add User” should comply with HTML5 validations.  
+
+These forms should show a success message or validation errors.  
+
+CSS STYLING BREAKDOWN: A STRUCTURED OVERVIEW  
+1. ELEMENT: body (Page Background and Theme Colors)  
+Purpose: Controls the overall look, including theme colors.  
+
+Property (light): --bg-color: #ffffff; --text-color: #000000;  
+
+Property (dark): --bg-color: #1e1e1e; --text-color: #ffffff;  
+
+The theme switch toggles between these using a .dark-theme class or CSS variables.  
+
+2. ELEMENT: .dashboard-container (Main Layout Grid)  
+Purpose: Encloses the entire dashboard and establishes the grid structure.  
+
+Properties & Effects:  
+
+display: grid; Enables the grid layout.  
+
+grid-template-columns: 240px 1fr; Sidebar + main content.  
+
+gap: 20px; Space between elements.  
+
+min-height: 100vh; Full height of the viewport.  
+
+3. ELEMENT: .sidebar (Left Navigation Menu)  
+Purpose: Styles the sidebar for navigation.  
+
+Properties & Effects:  
+
+background-color: var(--bg-color);  
+
+position: fixed; Keeps it static during scrolls.  
+
+height: 100vh; Full vertical height.  
+
+padding: 20px; Internal spacing.  
+
+box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); Adds separation from the content.  
+
+4. ELEMENT: .main-content (Dashboard Main Section)  
+Purpose: Holds widgets, panels, and all the dynamic content.  
+
+Properties & Effects:  
+
+padding: 40px;  
+
+display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+
+gap: 30px; Ensures flexible, responsive panels.  
+
+5. ELEMENT: .card / .panel (Individual Widget Panels)  
+Purpose: Each box in the dashboard represents stats or sections.  
+
+Properties & Effects:  
+
+background-color: var(--bg-color);  
+
+color: var(--text-color);  
+
+padding: 20px;  
+
+border-radius: 10px;  
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+
+6. ELEMENT: .theme-toggle (Theme Switch Button)  
+Purpose: Button to toggle between light and dark themes.  
+
+Properties & Effects:  
+
+padding: 10px 20px;  
+
+background-color: #4a90e2;  
+
+color: #ffffff;  
+
+border-radius: 5px;  
+
+cursor: pointer;  
+
+This may toggle the .dark-theme class on body using JavaScript.  
+
+LEARNING OUTCOMES:  
+How to design a fully functional admin dashboard using CSS Grid layout.  
+
+How to implement theme switching with CSS variables and JavaScript.  
+
+How to test UI components and layout behavior across different screen sizes.  
+
+Learned how responsive design principles and accessibility impact real UI/UX situations.  

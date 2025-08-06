@@ -3,6 +3,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+#darkModeToggle {
+  display: none;
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@ body {
 
 .dark-mode-toggle {
   font-size: 14px;
+  cursor: pointer;
 }
 
 .main {
@@ -57,25 +62,25 @@ body {
   padding: 10px 0;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
+
+#darkModeToggle:checked ~ .dashboard {
   background-color: #1e1e1e;
   color: #ddd;
 }
 
-body.dark-mode .header,
-body.dark-mode .footer {
+#darkModeToggle:checked ~ .dashboard .header,
+#darkModeToggle:checked ~ .dashboard .footer {
   background-color: #333;
 }
 
-body.dark-mode .sidebar {
+#darkModeToggle:checked ~ .dashboard .sidebar {
   background-color: #2a2a2a;
 }
 
-body.dark-mode .sidebar ul li a {
+#darkModeToggle:checked ~ .dashboard .sidebar ul li a {
   color: #66b2ff;
 }
 
-body.dark-mode .content {
+#darkModeToggle:checked ~ .dashboard .content {
   background-color: #1e1e1e;
 }
