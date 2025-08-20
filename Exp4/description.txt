@@ -50,25 +50,6 @@ One textarea updates both counters incorrectly.
 
 Counter shows wrong number compared to actual characters.
 
-3. FIELD: Multiple Boxes
-Requirement:
-
-The project should support more than one textarea with independent counters.
-
-Each box should have a heading and a styled border.
-
-VALID BEHAVIOR:
-
-Two boxes are shown, each with its own counter.
-
-Typing in one box does not affect the other counter.
-
-INVALID BEHAVIOR:
-
-Both counters change at the same time.
-
-Only one box works, the second remains static.
-
 CSS STYLING BREAKDOWN: A STRUCTURED OVERVIEW
 1. ELEMENT: body (Page Background)
 Purpose: Provides overall page style.
