@@ -1,0 +1,181 @@
+📚 BOOK LIST APP
+
+FEATURES, TEST CASES & VALIDATIONS
+
+1. FIELD: Book List Display
+
+Requirement:
+
+Show a list of books with title and author.
+
+Each entry must be clear and readable.
+
+VALID BEHAVIOR:
+
+Books render from the state array.
+
+Each book shows both title and author.
+
+New books appear instantly without reload.
+
+INVALID BEHAVIOR:
+
+List does not update when state changes.
+
+Book renders with missing details (title or author).
+
+2. FIELD: Search Box (Filter by Title/Author)
+
+Requirement:
+
+A text input filters books dynamically by typing.
+
+Works for both title and author.
+
+VALID BEHAVIOR:
+
+Typing “1984” shows only 1984 by Orwell.
+
+Search is case-insensitive.
+
+Empty input shows full list again.
+
+INVALID BEHAVIOR:
+
+Typing does not change the list.
+
+Only filters by title but ignores author.
+
+Clearing search still hides results.
+
+3. FIELD: Add Book Form
+
+Requirement:
+
+Two inputs: one for title, one for author.
+
+A button (➕ Add Book) adds a new entry to the list.
+
+VALID BEHAVIOR:
+
+Submitting with both fields filled adds a new book.
+
+Inputs clear after submission.
+
+New book appears immediately without refresh.
+
+INVALID BEHAVIOR:
+
+Empty title/author still adds a blank book.
+
+Clicking “Add” does nothing.
+
+List reloads instead of updating dynamically.
+
+4. FIELD: Remove Button
+
+Requirement:
+
+Each book has a ❌ Remove button.
+
+Clicking removes only that book.
+
+VALID BEHAVIOR:
+
+Clicking remove instantly deletes that book from state.
+
+Other books remain unaffected.
+
+INVALID BEHAVIOR:
+
+Clicking remove deletes wrong book.
+
+Remove button does nothing.
+
+Page reloads after removing.
+
+5. FIELD: Dynamic Rendering (No Reload)
+
+Requirement:
+
+All actions (add, remove, search) must happen without reloading the page.
+
+React state updates should re-render the list dynamically.
+
+VALID BEHAVIOR:
+
+Adding/removing/searching instantly updates UI.
+
+Browser does not refresh.
+
+INVALID BEHAVIOR:
+
+Requires manual reload to see changes.
+
+UI does not reflect current state.
+
+🎨 CSS STYLING BREAKDOWN
+
+ELEMENT: body (Page Background)
+
+Purpose: Clean, readable typography.
+
+Properties:
+
+font-family: Arial, sans-serif; margin: 0; background: #f9f9f9;
+
+
+ELEMENT: .container (App Wrapper)
+
+Purpose: Centers app & sets width.
+
+Properties:
+
+max-width: 500px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+
+ELEMENT: input[type="text"] (Search & Form Inputs)
+
+Purpose: User entry fields.
+
+Properties:
+
+width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;
+
+
+ELEMENT: button (Add & Remove)
+
+Purpose: Action buttons.
+
+Properties:
+
+padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer;
+
+
+Variants:
+
+.add-btn { background: green; color: white; }
+
+.remove-btn { background: red; color: white; }
+
+ELEMENT: ul li (Book Items)
+
+Purpose: Display books in styled boxes.
+
+Properties:
+
+list-style: none; border: 1px solid #ddd; padding: 10px; margin-bottom: 8px; display: flex; justify-content: space-between; border-radius: 4px;
+
+🎓 LEARNING OUTCOMES
+
+How to use React useState for managing data (books, search query, inputs).
+
+Implementing dynamic filtering with .filter() on arrays.
+
+Handling form inputs as controlled components.
+
+Using map() for rendering lists dynamically.
+
+Updating UI without page reload (state-driven rendering).
+
+Building CRUD-like features (Create, Read, Delete) in React.

@@ -1,0 +1,145 @@
+1. FIELD: Product Data via Props
+
+Requirement:
+
+Component should accept name, price, and inStock as props.
+
+Props must dynamically update the component without editing code.
+
+VALID BEHAVIOR:
+
+Passing different props shows different product details.
+
+Example:
+
+<ProductCard name="Laptop" price={55000} inStock={true} />
+
+Renders → “Laptop, ₹55000, In Stock”.
+
+INVALID BEHAVIOR:
+
+Component ignores props and shows fixed text.
+
+Missing props cause blank or broken UI.
+
+2. FIELD: Layout (Card Box)
+
+Requirement:
+
+Display details in a neat, styled box (card).
+
+Must show product name, price, and stock status clearly.
+
+VALID BEHAVIOR:
+
+Name displayed as heading.
+
+Price shown with currency format.
+
+Stock status visible in green/red.
+
+INVALID BEHAVIOR:
+
+Text overlaps or is unclear.
+
+Price or stock status missing.
+
+3. FIELD: Conditional Rendering (Stock Status)
+
+Requirement:
+
+If inStock = true, show “In Stock” in green.
+
+If inStock = false, show “Out of Stock” in red.
+
+VALID BEHAVIOR:
+
+Passing true → Green “In Stock”.
+
+Passing false → Red “Out of Stock”.
+
+INVALID BEHAVIOR:
+
+Always shows same status.
+
+Wrong color used.
+
+4. FIELD: Dynamic Usage (Reusability)
+
+Requirement:
+
+One component must work for all products.
+
+Must be reusable in a parent component (App.js).
+
+VALID BEHAVIOR:
+
+Multiple products passed → Multiple cards displayed.
+
+Example:
+
+<ProductCard name="Shoes" price={2000} inStock={true} />
+<ProductCard name="Phone" price={25000} inStock={false} />
+
+
+INVALID BEHAVIOR:
+
+Component works only for a fixed product.
+
+Code must be edited for each new product.
+
+🎨 CSS STYLING BREAKDOWN
+
+ELEMENT: .product-card (Card Wrapper)
+
+Purpose: Container for each product.
+
+Properties:
+
+border: 2px solid #ddd; 
+border-radius: 10px; 
+padding: 16px; 
+margin: 10px; 
+width: 220px; 
+text-align: center; 
+box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+
+
+ELEMENT: h2 (Product Name)
+
+Purpose: Highlight product name.
+
+Properties:
+
+font-size: 18px; margin-bottom: 10px;
+
+
+ELEMENT: p (Price & Stock)
+
+Purpose: Show details neatly.
+
+Properties:
+
+font-size: 14px; margin: 5px 0;
+
+
+ELEMENT: .in-stock / .out-of-stock
+
+Purpose: Differentiate stock status.
+
+Properties:
+
+.in-stock { color: green; font-weight: bold; }
+.out-of-stock { color: red; font-weight: bold; }
+
+🎓 LEARNING OUTCOMES
+
+How to create reusable React components.
+
+Using props to pass dynamic data.
+
+Conditional rendering with ? : operator.
+
+Styling components with CSS classes.
+
+Building a small dynamic UI without editing component code.
