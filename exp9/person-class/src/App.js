@@ -11,7 +11,6 @@ class Person {
   }
 }
 
-// Subclass: Student
 class Student extends Person {
   constructor(name, age, course) {
     super(name, age);
@@ -23,7 +22,6 @@ class Student extends Person {
   }
 }
 
-// Subclass: Teacher
 class Teacher extends Person {
   constructor(name, age, subject) {
     super(name, age);
