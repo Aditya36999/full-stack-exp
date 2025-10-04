@@ -1,0 +1,76 @@
+.player-container {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.2s ease;
+}
+
+.player-item:hover {
+  background-color: #f8f8f8;
+}
+
+.player-id {
+  font-weight: bold;
+  color: #333;
+  width: 40px;
+}
+
+.player-name {
+  flex: 1;
+  text-align: left;
+  color: #444;
+}
+
+.player-role {
+  color: #666;
+  font-style: italic;
+}
+
+.no-result {
+  text-align: center;
+  color: #888;
+  margin-top: 15px;
+  font-size: 14px;
+}
